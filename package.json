@@ -1,0 +1,27 @@
+{
+  "name": "leetkob-pa2",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "LeeTKOB PA2: an enforced quality gate and transactional lab publishing contract",
+  "engines": {
+    "node": ">=24.11.0 <25"
+  },
+  "scripts": {
+    "start": "node src/server.ts",
+    "demo:seed": "node scripts/seed-demo.ts",
+    "lint": "eslint . --max-warnings=0",
+    "format:check": "prettier --check .",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --test-reporter=spec test/*.test.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.1",
+    "@types/node": "24.10.0",
+    "eslint": "9.39.1",
+    "prettier": "3.6.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.46.3"
+  }
+}
