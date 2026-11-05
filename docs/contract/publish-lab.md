@@ -17,21 +17,21 @@ Every non-2xx response is RFC 9457 problem details with `Content-Type: applicati
 
 Type prefix: `https://leetkob.example/problems/`. These identifiers are stable reserved-domain identifiers; clients branch on `type`, not human wording. They do not promise a hosted documentation service.
 
-| Slug | Status | Title | Trigger / client action |
-| --- | ---: | --- | --- |
-| `invalid-json` | 400 | Malformed JSON | Body is empty or not parseable JSON; send `{}`. |
-| `validation` | 400 | Invalid request | Valid JSON is not an object, or any query parameter is present. `errors` contains every applicable `{pointer, detail}` or `{parameter, detail}`; whole-body pointer is `""`. |
-| `authentication-required` | 401 | Authentication required | Missing/invalid credentials. Includes `WWW-Authenticate: Bearer realm="leetkob"`. Obtain a valid credential. |
-| `forbidden` | 403 | Forbidden | Authenticated role is not TA; obtain TA authorization. |
-| `not-found` | 404 | Not found | Unknown path, invalid ID, absent lab or foreign lab. Do not infer existence or retry with another student's ID. |
-| `method-not-allowed` | 405 | Method not allowed | Valid route shape, method other than POST; includes `Allow: POST`. |
-| `deadline-not-reached` | 409 | Submission window open | Owned unpublished lab has `now < submissionDeadline`. Wait until the deadline. |
-| `judging-pending` | 409 | Judging pending | At least one counted submission is queued or running. Wait for final judge results and resulting review items. |
-| `reviews-pending` | 409 | Reviews pending | Any required queue item lacks a TA decision, including unsure, violation or sampled pass items. Complete the human review. |
-| `payload-too-large` | 413 | Payload too large | Body exceeds 4096 UTF-8 bytes, including whitespace. Send a small object. |
-| `unsupported-media-type` | 415 | Unsupported media type | Content-Type is not `application/json` (optional `charset=utf-8` only), or Content-Encoding is neither absent nor identity. |
-| `publication-unavailable` | 503 | Publication unavailable | SQLite lock prevents the transaction. Includes `Retry-After: 1`; retry the same POST. |
-| `internal` | 500 | Internal error | Unexpected adapter/store/serialization failure. Fixed detail: `The request could not be completed.` Safely retry; no partial publication may persist. |
+| Slug                      | Status | Title                   | Trigger / client action                                                                                                                                                      |
+| ------------------------- | -----: | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `invalid-json`            |    400 | Malformed JSON          | Body is empty or not parseable JSON; send `{}`.                                                                                                                              |
+| `validation`              |    400 | Invalid request         | Valid JSON is not an object, or any query parameter is present. `errors` contains every applicable `{pointer, detail}` or `{parameter, detail}`; whole-body pointer is `""`. |
+| `authentication-required` |    401 | Authentication required | Missing/invalid credentials. Includes `WWW-Authenticate: Bearer realm="leetkob"`. Obtain a valid credential.                                                                 |
+| `forbidden`               |    403 | Forbidden               | Authenticated role is not TA; obtain TA authorization.                                                                                                                       |
+| `not-found`               |    404 | Not found               | Unknown path, invalid ID, absent lab or foreign lab. Do not infer existence or retry with another student's ID.                                                              |
+| `method-not-allowed`      |    405 | Method not allowed      | Valid route shape, method other than POST; includes `Allow: POST`.                                                                                                           |
+| `deadline-not-reached`    |    409 | Submission window open  | Owned unpublished lab has `now < submissionDeadline`. Wait until the deadline.                                                                                               |
+| `judging-pending`         |    409 | Judging pending         | At least one counted submission is queued or running. Wait for final judge results and resulting review items.                                                               |
+| `reviews-pending`         |    409 | Reviews pending         | Any required queue item lacks a TA decision, including unsure, violation or sampled pass items. Complete the human review.                                                   |
+| `payload-too-large`       |    413 | Payload too large       | Body exceeds 4096 UTF-8 bytes, including whitespace. Send a small object.                                                                                                    |
+| `unsupported-media-type`  |    415 | Unsupported media type  | Content-Type is not `application/json` (optional `charset=utf-8` only), or Content-Encoding is neither absent nor identity.                                                  |
+| `publication-unavailable` |    503 | Publication unavailable | SQLite lock prevents the transaction. Includes `Retry-After: 1`; retry the same POST.                                                                                        |
+| `internal`                |    500 | Internal error          | Unexpected adapter/store/serialization failure. Fixed detail: `The request could not be completed.` Safely retry; no partial publication may persist.                        |
 
 Example:
 
@@ -65,13 +65,13 @@ Cache-Control: no-store
 }
 ```
 
-| Member | Rule |
-| --- | --- |
-| `labId` | Requested positive safe integer |
-| `status` | Literal `published` |
-| `publishedAt` | First successful transaction's server time in UTC; immutable on retries |
-| `publishedBy` | Stable opaque principal ID of the TA who first published; not a name or credential |
-| `submissionCount` | Nonnegative integer count of counted submissions snapshotted in that transaction |
+| Member            | Rule                                                                               |
+| ----------------- | ---------------------------------------------------------------------------------- |
+| `labId`           | Requested positive safe integer                                                    |
+| `status`          | Literal `published`                                                                |
+| `publishedAt`     | First successful transaction's server time in UTC; immutable on retries            |
+| `publishedBy`     | Stable opaque principal ID of the TA who first published; not a name or credential |
+| `submissionCount` | Nonnegative integer count of counted submissions snapshotted in that transaction   |
 
 One lab has at most one publication and one `lab.published` audit event. A published mark snapshot contains one prepared score for each counted submission. The receipt is not a grade list. Later grade corrections/appeals are separate audited operations; republishing does not recompute marks.
 
