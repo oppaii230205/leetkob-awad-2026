@@ -1,0 +1,24 @@
+{
+  "reviewDateLocal": "2026-11-05",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "inputs": [
+    {
+      "name": "LeeTKOB — class project brief.pdf",
+      "pagesRead": 4,
+      "sha256": "cee8c09fff906302e92966e37ddea1240fdc44aa55ea9e3d522a33f5f9d2e518"
+    },
+    {
+      "name": "PA#2 rubric — Harness and quality gate.pdf",
+      "pagesRead": 4,
+      "sha256": "e77f0f42407ef54c22e24e3f4a6d2c0dc6c1676d8fcf8684000a48ec3acfc579"
+    },
+    {
+      "name": "Product-owner FAQ",
+      "url": "https://github.com/tkob-team/LeeTKOB-FAQ/blob/2b82b90ca3696fa81c68464f8a51ceb86406fef6/FAQ.md",
+      "commit": "2b82b90ca3696fa81c68464f8a51ceb86406fef6"
+    }
+  ],
+  "classroom": "https://classroom.google.com/u/0/c/ODg2MTU1OTQ4NDc0/a/ODkzNzE1NjU1NDc5/details",
+  "classroomAccess": "Assignment text supplied directly by requesting member; PDFs supplied locally. Authenticated Classroom page was not required or opened after the public fetch could not access it.",
+  "templateFinding": "The downloaded SELF_ASSESSMENT_REPORT (1).md is a Smart Restaurant final-project template. Its unrelated feature deduction table is not the PA2 rubric."
+}

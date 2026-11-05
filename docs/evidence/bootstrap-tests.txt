@@ -1,0 +1,38 @@
+
+> leetkob-pa2@0.1.0 test
+> node --test --test-reporter=spec test/*.test.ts
+
+✔ demo authentication fails closed and never accepts fixture identities or supplied roles (2.7479ms)
+(node:17748) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ §§3-4: publish snapshots prepared marks and records exactly one auditable receipt (144.1952ms)
+✔ §4: repeated POST is 200 and byte-identical, including another assigned TA and changed clock (108.9993ms)
+✔ §§1-2: missing/invalid credentials are 401 and advertise Bearer (89.3941ms)
+✔ §1: students and admins are 403; neither is a TA bypass (79.5337ms)
+✔ §§1,4: foreign TA and missing lab have identical non-disclosing 404 bodies (84.165ms)
+✔ §4: published receipts do not bypass revoked class ownership (110.4271ms)
+✔ §4: ownership is checked again inside the write transaction (89.5333ms)
+✔ §§1-2: invalid IDs, trailing slash and unknown routes are safe 404 problems (85.214ms)
+✔ §2: wrong method is 405 with Allow POST (84.9824ms)
+✔ §2: malformed or empty JSON is invalid-json, not a server failure (84.6999ms)
+✔ §§2,4: non-object JSON and every query name get validation field errors (88.5569ms)
+✔ §4: byte limit rejects >4096 bytes, accepts exactly 4096 and counts UTF-8 bytes (90.6291ms)
+✔ §4: only JSON UTF-8 and identity encoding are accepted (92.6038ms)
+✔ §4: one millisecond before deadline is 409; exact deadline succeeds (87.4145ms)
+✔ §4: queued/running judges block before review check; failed attempts can later succeed (123.8988ms)
+✔ §4: every undecided required review blocks; deciding it allows publication (98.2667ms)
+✔ §4: an empty lab can publish; another class pending item cannot block an owned lab (110.0025ms)
+✔ §4: 24 simultaneous requests converge on one publication, marks snapshot and audit event (113.6902ms)
+✔ §4: independent reopened store replays persisted receipt without generating a new timestamp (89.4663ms)
+✔ §§2,4: write contention is safe 503 with Retry-After; retry succeeds after release (467.1025ms)
+✔ §§2,4: audit failure rolls back receipt and marks; retry succeeds with no partial state (119.9421ms)
+✔ §2: unexpected identity adapter exception is a generic 500 without its secret (85.828ms)
+✔ §4: invalid replay input remains invalid and leaves one audit event (91.2361ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2789.6134

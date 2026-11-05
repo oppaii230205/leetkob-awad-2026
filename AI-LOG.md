@@ -40,4 +40,14 @@ See `docs/requirements.md` for the answers and source hierarchy. Subsequent entr
 
 ## Team responsibility allocation
 
+## A04 - Resolve dependency risk without ignoring peer constraints
+
+**Observed:** The initial pinned development-tool set reported seven moderate advisories, all propagated from a minimatch denial-of-service advisory. ESLint 9 also reported that its release line is unsupported. An attempted in-place upgrade hit npm peer-resolution errors because the old lock/tree still selected the previous ESLint/parser versions.
+
+**Changed:** Resolve a fresh lock from a clean temporary package directory, upgrade ESLint to 10 with its compatible TypeScript-ESLint peer range, and pin a fixed minimatch override. Install that lock with standard `npm ci`. The resulting audit reports zero vulnerabilities. Runtime application dependencies remain zero.
+
+**Rejected:** Use `--force` or `--legacy-peer-deps`, hide audit output, or claim a development-only vulnerability is irrelevant. A manually requested dependency-directory cleanup was rejected by automatic command review; the safe alternative used npm's own clean-install workflow without that filesystem command.
+
+## Team responsibility allocation (continued)
+
 Thịnh requested that all execution remain under his GitHub account and that the report allocate the work equally. We allocate one third of team responsibility to each member: Thịnh for integration/release evidence, Công for harness/CI review, and Hậu for contract/behavior review. This is an allocation of responsibility for the team deliverable, not a fabricated claim of separate commits or completed individual review. All agent execution in this session is attributed to the requesting account with AI assistance.

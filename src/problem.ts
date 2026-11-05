@@ -48,8 +48,7 @@ export const problems = {
 
 export type ProblemKind = keyof typeof problems;
 export type FieldError =
-  | { pointer: string; detail: string }
-  | { parameter: string; detail: string };
+  { pointer: string; detail: string } | { parameter: string; detail: string };
 
 export class Problem extends Error {
   readonly kind: ProblemKind;

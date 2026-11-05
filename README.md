@@ -21,12 +21,12 @@ npm run typecheck
 npm test
 ```
 
-| Required check | Local command | CI command |
-| --- | --- | --- |
-| lint | `npm run lint` | `npm run lint` |
-| format | `npm run format:check` | `npm run format:check` |
-| typecheck | `npm run typecheck` | `npm run typecheck` |
-| tests (including HTTP contract tests) | `npm test` | `npm test` |
+| Required check                        | Local command          | CI command             |
+| ------------------------------------- | ---------------------- | ---------------------- |
+| lint                                  | `npm run lint`         | `npm run lint`         |
+| format                                | `npm run format:check` | `npm run format:check` |
+| typecheck                             | `npm run typecheck`    | `npm run typecheck`    |
+| tests (including HTTP contract tests) | `npm test`             | `npm test`             |
 
 Each command returns nonzero on a failure. `npm run format` is the optional fixing command; CI uses the read-only format check. Contract tests are included in `npm test`, so a separate optional suite cannot be forgotten. Node's SQLite experimental warning is informational and is not suppressed or mistaken for a test failure.
 
@@ -58,11 +58,11 @@ POSIX shells can set the token using `export DEMO_AUTH_TOKEN="$(node -e "process
 
 All application variables are listed, without values, in `.env.example`. The application reads the process environment and does not auto-load `.env` files.
 
-| Variable | Default when absent | Meaning |
-| --- | --- | --- |
-| `HOST` | `127.0.0.1` | Development bind address |
-| `PORT` | `3000` | Integer 1-65535 |
-| `DATABASE_PATH` | `data/leetkob.db` | Local SQLite file; ignored by Git |
+| Variable          | Default when absent   | Meaning                              |
+| ----------------- | --------------------- | ------------------------------------ |
+| `HOST`            | `127.0.0.1`           | Development bind address             |
+| `PORT`            | `3000`                | Integer 1-65535                      |
+| `DATABASE_PATH`   | `data/leetkob.db`     | Local SQLite file; ignored by Git    |
 | `DEMO_AUTH_TOKEN` | none; startup refuses | At least 32 characters; demo TA only |
 
 **Active model provider/model: none in PA2. Model spending cap: USD 0 per lab and USD 0 total. Actual model cost per lab: USD 0.** No model API key is provisioned, no environment variable accepts one, and no model client is connected. No test calls a real model. Before PA3, the team must approve the provider/model, token/cost accounting, a hard per-lab cap and a provider-side spending cap. This report does not claim an external billing cap was configured for an account we did not use.
