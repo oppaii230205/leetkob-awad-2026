@@ -29,3 +29,15 @@ The user's actual brief asked us to examine all requirements before implementing
 **Rejected:** Build the full sandbox/model flow now and imply it has passed the later milestone safety/eval gates. No submitted C++ is executed in PA2 and no model service is connected.
 
 See `docs/requirements.md` for the answers and source hierarchy. Subsequent entries are added only after their work and experiments occur.
+
+## A03 - Diagnose a test-harness defect rather than mislabel it an API defect
+
+**Observed:** The first local run on Node 24.11.0 passed 8 of 24 tests. Sixteen failed at the shared no-side-effects assertion: SQLite returns a null-prototype row, while the helper compared that row's prototype with an ordinary object. HTTP status/body assertions preceding the helper passed. Lint and type checking passed.
+
+**Changed:** In a separate test-only correction after implementation commit `2917cec`, assert the scalar `count` equals zero for each of publications, marks and audit tables. This preserves the entire no-side-effect requirement and avoids asserting a database-driver implementation detail. No API source or contract clause changed.
+
+**Rejected:** Loosen expected API statuses, skip the failed tests, or report the initial run as green. The rules forbid changing a test to excuse an implementation defect; they do permit an explained repair to an objectively incorrect test oracle. Git history makes this correction reviewable.
+
+## Team responsibility allocation
+
+Thịnh requested that all execution remain under his GitHub account and that the report allocate the work equally. We allocate one third of team responsibility to each member: Thịnh for integration/release evidence, Công for harness/CI review, and Hậu for contract/behavior review. This is an allocation of responsibility for the team deliverable, not a fabricated claim of separate commits or completed individual review. All agent execution in this session is attributed to the requesting account with AI assistance.

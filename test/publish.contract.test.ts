@@ -117,9 +117,10 @@ function noPublication(repository: PublicationRepository) {
     "published_marks",
     "publication_audit",
   ]) {
-    assert.deepEqual(
-      repository.db.prepare(`SELECT COUNT(*) AS count FROM ${table}`).get(),
-      { count: 0 },
+    assert.equal(
+      repository.db.prepare(`SELECT COUNT(*) AS count FROM ${table}`).get()
+        ?.count,
+      0,
     );
   }
 }
