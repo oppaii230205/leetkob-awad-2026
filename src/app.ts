@@ -101,7 +101,7 @@ export function createApp(options: AppOptions): Server {
         principal,
         (options.clock ?? (() => new Date()))(),
       );
-      response.writeHead(result.replayed ? 201 : 200, {
+      response.writeHead(200, {
         ...securityHeaders,
         "Content-Type": "application/json",
         ...(result.replayed ? { "Idempotent-Replayed": "true" } : {}),
