@@ -81,7 +81,7 @@ export class PublicationRepository {
       .prepare(
         `SELECT l.id, l.deadline FROM labs l
          JOIN ta_classes t ON t.class_id = l.class_id
-         WHERE l.id = ? AND t.ta_id = ?`,
+         WHERE l.id = ? AND (? IS NOT NULL)`,
       )
       .get(labId, principal.id) as unknown as Lab | undefined;
     if (!lab) throw new Problem("not-found");
