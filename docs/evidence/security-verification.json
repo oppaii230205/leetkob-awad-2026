@@ -1,0 +1,23 @@
+{
+  "tool": "Gitleaks",
+  "version": "8.30.1",
+  "source": "https://github.com/gitleaks/gitleaks/releases/tag/v8.30.1",
+  "download": "gitleaks_8.30.1_windows_x64.zip",
+  "sha256VerifiedAgainstOfficialChecksums": "d29144deff3a68aa93ced33dddf84b7fdc26070add4aa0f4513094c8332afc4e",
+  "historyCommand": "gitleaks git . --log-opts=--all --redact --no-banner --report-format json",
+  "historyExitCode": 0,
+  "historyFindings": 0,
+  "historyScopeAtCapture": "All reachable local/remote refs through both repaired gate experiments; merges without diffs are not counted as scanned patches. Final tag history is scanned again during release verification.",
+  "treeCommand": "gitleaks dir <snapshot-of-tracked-and-candidate-files> --redact --no-banner --report-format json",
+  "treeExitCode": 0,
+  "treeFindings": 0,
+  "evidence": ["secret-scan-history.json", "secret-scan-history.txt", "secret-scan-tree.json", "secret-scan-tree.txt"],
+  "runtimeEnvironmentVariables": ["HOST", "PORT", "DATABASE_PATH", "DEMO_AUTH_TOKEN"],
+  "envExampleValues": "All empty",
+  "modelProvider": null,
+  "modelKeyProvisioned": false,
+  "modelSpendCapUsdPerLab": 0,
+  "modelSpendCapUsdTotal": 0,
+  "modelCalls": 0,
+  "limitation": "A clean scanner report is evidence of the scan, not a mathematical guarantee. No rotation incident was needed or claimed. Credentials used for GitHub administration remain outside this repository."
+}

@@ -1,0 +1,264 @@
+﻿2026-11-05T16:19:31.2467283Z Current runner version: '2.338.2'
+2026-11-05T16:19:31.2486474Z ##[group]Runner Image Provisioner
+2026-11-05T16:19:31.2487047Z Hosted Compute Agent
+2026-11-05T16:19:31.2487478Z Version: 20261028.624
+2026-11-05T16:19:31.2487919Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-05T16:19:31.2488367Z Build Date: 2026-10-28T21:51:42Z
+2026-11-05T16:19:31.2488874Z Worker ID: {64875b1a-3bb3-4950-85a3-0e0ade951039}
+2026-11-05T16:19:31.2489307Z Region: centralus
+2026-11-05T16:19:31.2489828Z Cloud: Azure
+2026-11-05T16:19:31.2490217Z ##[endgroup]
+2026-11-05T16:19:31.2491274Z ##[group]Operating System
+2026-11-05T16:19:31.2491705Z Ubuntu
+2026-11-05T16:19:31.2492040Z 24.04.5
+2026-11-05T16:19:31.2492352Z LTS
+2026-11-05T16:19:31.2492755Z ##[endgroup]
+2026-11-05T16:19:31.2493104Z ##[group]Runner Image
+2026-11-05T16:19:31.2493535Z Image: ubuntu-24.04
+2026-11-05T16:19:31.2493892Z Version: 20261101.360.1
+2026-11-05T16:19:31.2494754Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-05T16:19:31.2495634Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-05T16:19:31.2496267Z ##[endgroup]
+2026-11-05T16:19:31.2496932Z ##[group]GITHUB_TOKEN Permissions
+2026-11-05T16:19:31.2498327Z Contents: read
+2026-11-05T16:19:31.2498690Z Metadata: read
+2026-11-05T16:19:31.2499032Z ##[endgroup]
+2026-11-05T16:19:31.2500925Z Secret source: Actions
+2026-11-05T16:19:31.2501502Z Cache mode: write
+2026-11-05T16:19:31.2502062Z Prepare workflow directory
+2026-11-05T16:19:31.2719590Z Prepare all required actions
+2026-11-05T16:19:31.2755226Z Getting action download info
+2026-11-05T16:19:31.5220175Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2026-11-05T16:19:31.6237821Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-11-05T16:19:31.8067592Z Complete job name: tests
+2026-11-05T16:19:31.8585632Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-11-05T16:19:31.8586165Z with:
+2026-11-05T16:19:31.8586411Z   fetch-depth: 0
+2026-11-05T16:19:31.8586682Z   persist-credentials: false
+2026-11-05T16:19:31.8586997Z   repository: oppaii230205/leetkob-awad-2026
+2026-11-05T16:19:31.8589260Z   token: ***
+2026-11-05T16:19:31.8589502Z   ssh-strict: true
+2026-11-05T16:19:31.8589898Z   ssh-user: git
+2026-11-05T16:19:31.8590144Z   clean: true
+2026-11-05T16:19:31.8590405Z   sparse-checkout-cone-mode: true
+2026-11-05T16:19:31.8590712Z   fetch-tags: false
+2026-11-05T16:19:31.8590968Z   show-progress: true
+2026-11-05T16:19:31.8591224Z   lfs: false
+2026-11-05T16:19:31.8591462Z   submodules: false
+2026-11-05T16:19:31.8591722Z   set-safe-directory: true
+2026-11-05T16:19:31.8592078Z ##[endgroup]
+2026-11-05T16:19:32.0991995Z Syncing repository: oppaii230205/leetkob-awad-2026
+2026-11-05T16:19:32.0993166Z ##[group]Getting Git version info
+2026-11-05T16:19:32.0993707Z Working directory is '/home/runner/work/leetkob-awad-2026/leetkob-awad-2026'
+2026-11-05T16:19:32.0994326Z [command]/usr/bin/git version
+2026-11-05T16:19:32.1075501Z git version 2.56.0
+2026-11-05T16:19:32.1091010Z ##[endgroup]
+2026-11-05T16:19:32.1102913Z Temporarily overriding HOME='/home/runner/work/_temp/b28ea9c5-98b9-4c55-9046-e58cd2628bd5' before making global git config changes
+2026-11-05T16:19:32.1103962Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-05T16:19:32.1107358Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/leetkob-awad-2026/leetkob-awad-2026
+2026-11-05T16:19:32.1164390Z Deleting the contents of '/home/runner/work/leetkob-awad-2026/leetkob-awad-2026'
+2026-11-05T16:19:32.1165683Z ##[group]Initializing the repository
+2026-11-05T16:19:32.1166382Z [command]/usr/bin/git init /home/runner/work/leetkob-awad-2026/leetkob-awad-2026
+2026-11-05T16:19:32.1339154Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-05T16:19:32.1340902Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-05T16:19:32.1341994Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-05T16:19:32.1342838Z hint: call:
+2026-11-05T16:19:32.1343358Z hint:
+2026-11-05T16:19:32.1343970Z hint: 	git config --global init.defaultBranch <name>
+2026-11-05T16:19:32.1344679Z hint:
+2026-11-05T16:19:32.1345346Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-05T16:19:32.1346365Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-05T16:19:32.1347178Z hint:
+2026-11-05T16:19:32.1347691Z hint: 	git branch -m <name>
+2026-11-05T16:19:32.1348257Z hint:
+2026-11-05T16:19:32.1348967Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-05T16:19:32.1350436Z Initialized empty Git repository in /home/runner/work/leetkob-awad-2026/leetkob-awad-2026/.git/
+2026-11-05T16:19:32.1357849Z [command]/usr/bin/git remote add origin https://github.com/oppaii230205/leetkob-awad-2026
+2026-11-05T16:19:32.1408011Z ##[endgroup]
+2026-11-05T16:19:32.1408724Z ##[group]Disabling automatic garbage collection
+2026-11-05T16:19:32.1412109Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-05T16:19:32.1445992Z ##[endgroup]
+2026-11-05T16:19:32.1446680Z ##[group]Setting up auth
+2026-11-05T16:19:32.1452083Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-05T16:19:32.1500660Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-05T16:19:32.1836486Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-05T16:19:32.1875842Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-05T16:19:32.2077830Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-05T16:19:32.2122673Z ##[endgroup]
+2026-11-05T16:19:32.2123243Z ##[group]Fetching the repository
+2026-11-05T16:19:32.2133136Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/* +7ac26ace78975fb6165198aed4c3f892eec51cc7:refs/remotes/pull/1/merge
+2026-11-05T16:19:32.6461278Z From https://github.com/oppaii230205/leetkob-awad-2026
+2026-11-05T16:19:32.6462004Z  * [new branch]      codex/prove-replay-gate                  -> origin/codex/prove-replay-gate
+2026-11-05T16:19:32.6462570Z  * [new branch]      main                                     -> origin/main
+2026-11-05T16:19:32.6463058Z  * [new ref]         7ac26ace78975fb6165198aed4c3f892eec51cc7 -> pull/1/merge
+2026-11-05T16:19:32.6467813Z ##[endgroup]
+2026-11-05T16:19:32.6468527Z ##[group]Determining the checkout info
+2026-11-05T16:19:32.6469286Z ##[endgroup]
+2026-11-05T16:19:32.6473481Z [command]/usr/bin/git sparse-checkout disable
+2026-11-05T16:19:32.6531795Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-05T16:19:32.6567730Z ##[group]Checking out the ref
+2026-11-05T16:19:32.6570942Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1/merge
+2026-11-05T16:19:32.6638129Z Note: switching to 'refs/remotes/pull/1/merge'.
+2026-11-05T16:19:32.6638526Z 
+2026-11-05T16:19:32.6638846Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-05T16:19:32.6639619Z changes and commit them, and you can discard any commits you make in this
+2026-11-05T16:19:32.6640762Z state without impacting any branches by switching back to a branch.
+2026-11-05T16:19:32.6641069Z 
+2026-11-05T16:19:32.6641269Z If you want to create a new branch to retain commits you create, you may
+2026-11-05T16:19:32.6641768Z do so (now or later) by using -c with the switch command. Example:
+2026-11-05T16:19:32.6642216Z 
+2026-11-05T16:19:32.6642342Z   git switch -c <new-branch-name>
+2026-11-05T16:19:32.6642527Z 
+2026-11-05T16:19:32.6642646Z Or undo this operation with:
+2026-11-05T16:19:32.6642817Z 
+2026-11-05T16:19:32.6642926Z   git switch -
+2026-11-05T16:19:32.6643062Z 
+2026-11-05T16:19:32.6643286Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-05T16:19:32.6643593Z 
+2026-11-05T16:19:32.6643953Z HEAD is now at 7ac26ac Merge b68fe2a62b0c066fa1a14df1891822adb89aa748 into b2b721e9de87937bba12936f46916f83df5d13fc
+2026-11-05T16:19:32.6648116Z ##[endgroup]
+2026-11-05T16:19:32.6696933Z [command]/usr/bin/git log -1 --format=%H
+2026-11-05T16:19:32.6727287Z 7ac26ace78975fb6165198aed4c3f892eec51cc7
+2026-11-05T16:19:32.6734406Z ##[group]Removing auth
+2026-11-05T16:19:32.6736693Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-05T16:19:32.6771260Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-05T16:19:32.6963048Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-05T16:19:32.6993631Z http.https://github.com/.extraheader
+2026-11-05T16:19:32.6999161Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-05T16:19:32.7036706Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-05T16:19:32.7227906Z ##[endgroup]
+2026-11-05T16:19:32.7464534Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+2026-11-05T16:19:32.7464955Z with:
+2026-11-05T16:19:32.7465204Z   node-version-file: .node-version
+2026-11-05T16:19:32.7465491Z   cache: npm
+2026-11-05T16:19:32.7465739Z   always-auth: false
+2026-11-05T16:19:32.7465996Z   check-latest: false
+2026-11-05T16:19:32.7468229Z   token: ***
+2026-11-05T16:19:32.7468463Z ##[endgroup]
+2026-11-05T16:19:32.8501650Z Node version file is not JSON file
+2026-11-05T16:19:32.8502313Z Resolved .node-version as 24.11.0
+2026-11-05T16:19:32.8517520Z Attempting to download 24.11.0...
+2026-11-05T16:19:32.8632724Z (node:2136) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-05T16:19:32.8633913Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-05T16:19:33.6585537Z Acquiring 24.11.0 - x64 from https://github.com/actions/node-versions/releases/download/24.11.0-18894910158/node-24.11.0-linux-x64.tar.gz
+2026-11-05T16:19:38.4428458Z Extracting ...
+2026-11-05T16:19:38.4532307Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/1f4f1c11-a7e1-4fa1-b701-315b67f5068e -f /home/runner/work/_temp/183674e6-f779-4036-a4bd-4f69b5a684fa
+2026-11-05T16:19:39.4464868Z Adding to the cache ...
+2026-11-05T16:19:42.2407398Z ##[group]Environment details
+2026-11-05T16:19:42.4225098Z node: v24.11.0
+2026-11-05T16:19:42.4225660Z npm: 11.6.1
+2026-11-05T16:19:42.4225874Z yarn: 1.22.22
+2026-11-05T16:19:42.4227685Z ##[endgroup]
+2026-11-05T16:19:42.4239462Z [command]/opt/hostedtoolcache/node/24.11.0/x64/bin/npm config get cache
+2026-11-05T16:19:42.5162201Z /home/runner/.npm
+2026-11-05T16:19:42.6734419Z Cache hit for: node-cache-Linux-x64-npm-556e882bf7d3e5c5ab46034b9b8f3b14742c21ebc328b0bb7f33fdd26454904b
+2026-11-05T16:19:42.6815243Z (node:2136) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-05T16:19:43.2353963Z Received 11047730 of 11047730 (100.0%), 24.3 MBs/sec
+2026-11-05T16:19:43.2354509Z Cache Size: ~11 MB (11047730 B)
+2026-11-05T16:19:43.2373326Z [command]/usr/bin/tar -xf /home/runner/work/_temp/516be752-9550-47dc-a5ff-6042d6323c23/cache.tzst -P -C /home/runner/work/leetkob-awad-2026/leetkob-awad-2026 --use-compress-program unzstd
+2026-11-05T16:19:43.2692288Z Cache restored successfully
+2026-11-05T16:19:43.2700998Z Cache restored from key: node-cache-Linux-x64-npm-556e882bf7d3e5c5ab46034b9b8f3b14742c21ebc328b0bb7f33fdd26454904b
+2026-11-05T16:19:43.2896806Z ##[group]Run npm ci
+2026-11-05T16:19:43.2897088Z [36;1mnpm ci[0m
+2026-11-05T16:19:43.2919452Z shell: /usr/bin/bash -e {0}
+2026-11-05T16:19:43.2919628Z ##[endgroup]
+2026-11-05T16:19:44.0362980Z 
+2026-11-05T16:19:44.0371247Z added 100 packages, and audited 101 packages in 706ms
+2026-11-05T16:19:44.0371635Z 
+2026-11-05T16:19:44.0371872Z 31 packages are looking for funding
+2026-11-05T16:19:44.0372171Z   run `npm fund` for details
+2026-11-05T16:19:44.0372335Z 
+2026-11-05T16:19:44.0372452Z found 0 vulnerabilities
+2026-11-05T16:19:44.0799078Z ##[group]Run npm test
+2026-11-05T16:19:44.0799282Z [36;1mnpm test[0m
+2026-11-05T16:19:44.0817090Z shell: /usr/bin/bash -e {0}
+2026-11-05T16:19:44.0817261Z ##[endgroup]
+2026-11-05T16:19:44.1450317Z 
+2026-11-05T16:19:44.1451006Z > leetkob-pa2@0.1.0 test
+2026-11-05T16:19:44.1451363Z > node --test --test-reporter=spec test/*.test.ts
+2026-11-05T16:19:44.1451520Z 
+2026-11-05T16:19:44.2442532Z ✔ demo authentication fails closed and never accepts fixture identities or supplied roles (3.152205ms)
+2026-11-05T16:19:44.3952990Z (node:2223) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+2026-11-05T16:19:44.3954100Z (Use `node --trace-warnings ...` to show where the warning was created)
+2026-11-05T16:19:44.4365214Z ✔ §§3-4: publish snapshots prepared marks and records exactly one auditable receipt (156.922567ms)
+2026-11-05T16:19:44.4652353Z ✖ §4: repeated POST is 200 and byte-identical, including another assigned TA and changed clock (26.517731ms)
+2026-11-05T16:19:44.4845022Z ✔ §§1-2: missing/invalid credentials are 401 and advertise ***
+2026-11-05T16:19:44.5008589Z ✔ §1: students and admins are 403; neither is a TA bypass (18.801553ms)
+2026-11-05T16:19:44.5377160Z ✔ §§1,4: foreign TA and missing lab have identical non-disclosing 404 bodies (17.654945ms)
+2026-11-05T16:19:44.5586812Z ✔ §4: published receipts do not bypass revoked class ownership (38.999777ms)
+2026-11-05T16:19:44.5746929Z ✔ §4: ownership is checked again inside the write transaction (16.929658ms)
+2026-11-05T16:19:44.5955779Z ✔ §§1-2: invalid IDs, trailing slash and unknown routes are safe 404 problems (20.32678ms)
+2026-11-05T16:19:44.6129237Z ✔ §2: wrong method is 405 with Allow POST (17.215507ms)
+2026-11-05T16:19:44.6338908Z ✔ §2: malformed or empty JSON is invalid-json, not a server failure (21.068423ms)
+2026-11-05T16:19:44.6571285Z ✔ §§2,4: non-object JSON and every query name get validation field errors (22.139061ms)
+2026-11-05T16:19:44.6760042Z ✔ §4: byte limit rejects >4096 bytes, accepts exactly 4096 and counts UTF-8 bytes (19.497568ms)
+2026-11-05T16:19:44.7098636Z ✔ §4: only JSON UTF-8 and identity encoding are accepted (33.243102ms)
+2026-11-05T16:19:44.7289937Z ✔ §4: one millisecond before deadline is 409; exact deadline succeeds (18.118315ms)
+2026-11-05T16:19:44.7568518Z ✔ §4: queued/running judges block before review check; failed attempts can later succeed (22.825678ms)
+2026-11-05T16:19:44.7761903Z ✔ §4: every undecided required review blocks; deciding it allows publication (25.830295ms)
+2026-11-05T16:19:44.8005695Z ✔ §4: an empty lab can publish; another class pending item cannot block an owned lab (21.801106ms)
+2026-11-05T16:19:44.8345059Z ✖ §4: 24 simultaneous requests converge on one publication, marks snapshot and audit event (36.116209ms)
+2026-11-05T16:19:44.8693956Z ✔ §4: independent reopened store replays persisted receipt without generating a new timestamp (35.10944ms)
+2026-11-05T16:19:45.1398294Z ✔ §§2,4: write contention is safe 503 with Retry-After; retry succeeds after release (269.712067ms)
+2026-11-05T16:19:45.1811129Z ✔ §§2,4: audit failure rolls back receipt and marks; retry succeeds with no partial state (19.069942ms)
+2026-11-05T16:19:45.1967791Z ✔ §2: unexpected identity adapter exception is a generic 500 without its secret (39.562225ms)
+2026-11-05T16:19:45.2021221Z ✔ §4: invalid replay input remains invalid and leaves one audit event (16.416323ms)
+2026-11-05T16:19:45.2133944Z ℹ tests 24
+2026-11-05T16:19:45.2134216Z ℹ suites 0
+2026-11-05T16:19:45.2134386Z ℹ pass 22
+2026-11-05T16:19:45.2134517Z ℹ fail 2
+2026-11-05T16:19:45.2134720Z ℹ cancelled 0
+2026-11-05T16:19:45.2134868Z ℹ skipped 0
+2026-11-05T16:19:45.2135018Z ℹ todo 0
+2026-11-05T16:19:45.2135219Z ℹ duration_ms 1044.976332
+2026-11-05T16:19:45.2135322Z 
+2026-11-05T16:19:45.2135399Z ✖ failing tests:
+2026-11-05T16:19:45.2135480Z 
+2026-11-05T16:19:45.2135613Z test at test/publish.contract.test.ts:161:1
+2026-11-05T16:19:45.2136480Z ✖ §4: repeated POST is 200 and byte-identical, including another assigned TA and changed clock (26.517731ms)
+2026-11-05T16:19:45.2136874Z   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+2026-11-05T16:19:45.2137111Z   
+2026-11-05T16:19:45.2137224Z   201 !== 200
+2026-11-05T16:19:45.2137351Z   
+2026-11-05T16:19:45.2137715Z       at TestContext.<anonymous> (file:///home/runner/work/leetkob-awad-2026/leetkob-awad-2026/test/publish.contract.test.ts:172:10)
+2026-11-05T16:19:45.2138369Z       at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-11-05T16:19:45.2138770Z       at async Test.run (node:internal/test_runner/test:1113:7)
+2026-11-05T16:19:45.2139069Z       at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+2026-11-05T16:19:45.2139379Z     generatedMessage: true,
+2026-11-05T16:19:45.2139621Z     code: 'ERR_ASSERTION',
+2026-11-05T16:19:45.2139950Z     actual: 201,
+2026-11-05T16:19:45.2140140Z     expected: 200,
+2026-11-05T16:19:45.2140345Z     operator: 'strictEqual',
+2026-11-05T16:19:45.2140563Z     diff: 'simple'
+2026-11-05T16:19:45.2140695Z   }
+2026-11-05T16:19:45.2140758Z 
+2026-11-05T16:19:45.2140935Z test at test/publish.contract.test.ts:443:1
+2026-11-05T16:19:45.2141485Z ✖ §4: 24 simultaneous requests converge on one publication, marks snapshot and audit event (36.116209ms)
+2026-11-05T16:19:45.2141849Z   AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+2026-11-05T16:19:45.2142069Z   
+2026-11-05T16:19:45.2142257Z     assert.ok(responses.every((response) => response.status === 200))
+2026-11-05T16:19:45.2142600Z   
+2026-11-05T16:19:45.2142923Z       at TestContext.<anonymous> (file:///home/runner/work/leetkob-awad-2026/leetkob-awad-2026/test/publish.contract.test.ts:448:10)
+2026-11-05T16:19:45.2143356Z       at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-11-05T16:19:45.2143677Z       at async Test.run (node:internal/test_runner/test:1113:7)
+2026-11-05T16:19:45.2143972Z       at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+2026-11-05T16:19:45.2144256Z     generatedMessage: true,
+2026-11-05T16:19:45.2144423Z     code: 'ERR_ASSERTION',
+2026-11-05T16:19:45.2144586Z     actual: false,
+2026-11-05T16:19:45.2144717Z     expected: true,
+2026-11-05T16:19:45.2144842Z     operator: '==',
+2026-11-05T16:19:45.2144989Z     diff: 'simple'
+2026-11-05T16:19:45.2145128Z   }
+2026-11-05T16:19:45.2234968Z ##[error]Process completed with exit code 1.
+2026-11-05T16:19:45.2323646Z Post job cleanup.
+2026-11-05T16:19:45.2910690Z [command]/usr/bin/git version
+2026-11-05T16:19:45.2966750Z git version 2.56.0
+2026-11-05T16:19:45.2994106Z Temporarily overriding HOME='/home/runner/work/_temp/8ac25358-654f-4ca7-99e7-8c8063449257' before making global git config changes
+2026-11-05T16:19:45.2994984Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-05T16:19:45.2997250Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/leetkob-awad-2026/leetkob-awad-2026
+2026-11-05T16:19:45.3038874Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-05T16:19:45.3073501Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-05T16:19:45.3298122Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-05T16:19:45.3335004Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-05T16:19:45.3685086Z Cleaning up orphan processes
+2026-11-05T16:19:45.3978356Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

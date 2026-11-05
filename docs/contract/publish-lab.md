@@ -1,19 +1,19 @@
 # LeeTKOB API contract - publish a lab, version 1
 
-Status: PA2 contract, 5 November 2026. This file is the specification; source must follow it. Its five sections follow IA3's CONTRACT.md. Tests refer to section numbers. Product sources: class brief §§3-4 and [FAQ-01](https://github.com/tkob-team/LeeTKOB-FAQ/blob/main/FAQ.md#faq-01), [FAQ-09](https://github.com/tkob-team/LeeTKOB-FAQ/blob/main/FAQ.md#faq-09), [FAQ-12](https://github.com/tkob-team/LeeTKOB-FAQ/blob/main/FAQ.md#faq-12). FAQ headings may be longer; search the stable FAQ number if an anchor is unavailable.
+Status: PA2 contract, 5 November 2026. This file is the specification; source must follow it. Its five sections follow IA3's CONTRACT.md. Tests refer to section numbers. Product sources: class brief §§3-4 and [the product-owner FAQ, entries FAQ-01, FAQ-09 and FAQ-12](https://github.com/tkob-team/LeeTKOB-FAQ/blob/2b82b90ca3696fa81c68464f8a51ceb86406fef6/FAQ.md). The pinned revision is recorded in source provenance.
 
 ## 1. Conventions
 
 - Endpoint: `POST /v1/labs/{labId}/publish`. `labId` is a canonical decimal positive safe integer (1 through 9007199254740991); no sign, leading zero, decimal, suffix or exponent. All other paths are not found. A trailing slash is a different path.
 - Transport: HTTP; JSON UTF-8. Production transport must use HTTPS. Times are UTC ISO 8601 with milliseconds. The server clock is authoritative.
 - Authentication: `Authorization: Bearer <opaque-token>`. A missing, malformed, invalid or revoked credential is 401. Tokens never appear in bodies or logs. The standalone PA2 demo recognizes one configured token; the HTTP application accepts a trusted identity adapter for the later account system.
-- Caller must have role `ta` and currently be assigned to the lab's class. A student or admin is 403. An authenticated TA cannot distinguish a missing lab from a lab outside their classes: both are the identical 404 representation. Authentication alone never grants ownership.
+- Caller must have role `ta` and currently be assigned to the lab's class. A student or admin is 403. An authenticated TA cannot distinguish a missing lab from a lab outside their classes: both use the identical 404 representation apart from the request's own canonical `instance` path. Authentication alone never grants ownership.
 - Every response carries `Cache-Control: no-store` and `X-Content-Type-Options: nosniff`. Clients ignore unknown response members. Requests may include unknown object members for additive compatibility; they have no effect and cannot set identity, status, scores or timestamps.
 - Clients need no pagination: this is one operation on one lab, with a bounded receipt. There is no student list or student code in its response.
 
 ## 2. Errors
 
-Every non-2xx response is RFC 9457 problem details with `Content-Type: application/problem+json`. Members: `type` (the exact URI below), `title` (exact title below), `status` (integer equal to HTTP status), `detail` (one safe occurrence-specific sentence) and `instance` (canonical path, without query). Unknown paths use `/v1` as instance rather than echoing untrusted input. No stack trace, database path, SQL, bearer token, foreign class, student identity, code or pending counts are returned.
+Every non-2xx response is RFC 9457 problem details with `Content-Type: application/problem+json`. As required by HTTP semantics, HEAD retains the error status and headers but omits the body. Members: `type` (the exact URI below), `title` (exact title below), `status` (integer equal to HTTP status), `detail` (one safe occurrence-specific sentence) and `instance` (canonical path, without query). Unknown paths use `/v1` as instance rather than echoing untrusted input. No stack trace, database path, SQL, bearer token, foreign class, student identity, code or pending counts are returned.
 
 Type prefix: `https://leetkob.example/problems/`. These identifiers are stable reserved-domain identifiers; clients branch on `type`, not human wording. They do not promise a hosted documentation service.
 
