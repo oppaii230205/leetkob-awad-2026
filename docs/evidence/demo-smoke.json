@@ -1,0 +1,12 @@
+{
+  "runtime": "Node 24.11.0",
+  "standaloneServer": true,
+  "seedExitCode": 0,
+  "firstStatus": 200,
+  "replayStatus": 200,
+  "replayHeader": "true",
+  "byteIdenticalReceipt": true,
+  "testFixtureIdentityDeniedStatus": 401,
+  "modelCalls": 0,
+  "note": "A random in-memory token was generated for this process only and is not included in this report."
+}

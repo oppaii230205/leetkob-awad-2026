@@ -1,0 +1,157 @@
+{
+  "repository": "https://github.com/oppaii230205/leetkob-awad-2026",
+  "bootstrapBeforeProtection": "b2b721e9de87937bba12936f46916f83df5d13fc",
+  "protectionEnabledLocal": "2026-11-05T23:19:00+07:00",
+  "requiredChecks": [
+    "lint",
+    "format",
+    "typecheck",
+    "tests"
+  ],
+  "enforceAdmins": true,
+  "experiments": [
+    {
+      "name": "replay-status",
+      "pr": "https://github.com/oppaii230205/leetkob-awad-2026/pull/1",
+      "badCommit": "b68fe2a62b0c066fa1a14df1891822adb89aa748",
+      "repairCommit": "6d789ba9116c7aa143ca1f0b243f71c7efd0bbaf",
+      "redRun": {
+        "id": 42063214659,
+        "url": "https://github.com/oppaii230205/leetkob-awad-2026/actions/runs/42063214659",
+        "conclusion": "failure",
+        "createdAt": "2026-11-05T16:19:28Z",
+        "checks": [
+          {
+            "name": "format",
+            "status": "completed",
+            "conclusion": "success",
+            "html_url": "https://github.com/oppaii230205/leetkob-awad-2026/actions/runs/42063214659/job/127370211251"
+          },
+          {
+            "name": "lint",
+            "status": "completed",
+            "conclusion": "success",
+            "html_url": "https://github.com/oppaii230205/leetkob-awad-2026/actions/runs/42063214659/job/127370210911"
+          },
+          {
+            "name": "typecheck",
+            "status": "completed",
+            "conclusion": "success",
+            "html_url": "https://github.com/oppaii230205/leetkob-awad-2026/actions/runs/42063214659/job/127370210830"
+          },
+          {
+            "name": "tests",
+            "status": "completed",
+            "conclusion": "failure",
+            "html_url": "https://github.com/oppaii230205/leetkob-awad-2026/actions/runs/42063214659/job/127370210420"
+          }
+        ]
+      },
+      "redPullRequestState": {
+        "mergeable": true,
+        "mergeable_state": "blocked",
+        "merged": false
+      },
+      "mergeAttempt": {
+        "httpStatus": 405,
+        "response": {
+          "message": "Required status check \"tests\" is failing.",
+          "documentation_url": "https://docs.github.com/articles/about-protected-branches",
+          "status": "405"
+        }
+      },
+      "greenRun": {
+        "id": 42063503823,
+        "url": "https://github.com/oppaii230205/leetkob-awad-2026/actions/runs/42063503823",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      "mergeAfterGreen": {
+        "sha": "291b575fa2e2645086122e7c7ee3113c060d75e4",
+        "merged": true,
+        "message": "Pull Request successfully merged"
+      },
+      "changedFiles": {
+        "b68fe2a62b0c066fa1a14df1891822adb89aa748": [
+          "src/app.ts"
+        ],
+        "6d789ba9116c7aa143ca1f0b243f71c7efd0bbaf": [
+          "src/app.ts"
+        ]
+      },
+      "testAndContractChangesInExperimentOrRepair": false
+    },
+    {
+      "name": "class-ownership",
+      "pr": "https://github.com/oppaii230205/leetkob-awad-2026/pull/2",
+      "badCommit": "b870d02ce2b0dbfd96da6135185f0d0627d43c0b",
+      "repairCommit": "95d575967e61670bc0dc2b79236e814255edd6e2",
+      "redRun": {
+        "id": 42063766722,
+        "url": "https://github.com/oppaii230205/leetkob-awad-2026/actions/runs/42063766722",
+        "conclusion": "failure",
+        "createdAt": "2026-11-05T16:22:31Z",
+        "checks": [
+          {
+            "name": "typecheck",
+            "status": "completed",
+            "conclusion": "success",
+            "html_url": "https://github.com/oppaii230205/leetkob-awad-2026/actions/runs/42063766722/job/127372158818"
+          },
+          {
+            "name": "tests",
+            "status": "completed",
+            "conclusion": "failure",
+            "html_url": "https://github.com/oppaii230205/leetkob-awad-2026/actions/runs/42063766722/job/127372158778"
+          },
+          {
+            "name": "format",
+            "status": "completed",
+            "conclusion": "success",
+            "html_url": "https://github.com/oppaii230205/leetkob-awad-2026/actions/runs/42063766722/job/127372158725"
+          },
+          {
+            "name": "lint",
+            "status": "completed",
+            "conclusion": "success",
+            "html_url": "https://github.com/oppaii230205/leetkob-awad-2026/actions/runs/42063766722/job/127372158645"
+          }
+        ]
+      },
+      "redPullRequestState": {
+        "mergeable": true,
+        "mergeable_state": "blocked",
+        "merged": false
+      },
+      "mergeAttempt": {
+        "httpStatus": 405,
+        "response": {
+          "message": "Required status check \"tests\" is failing.",
+          "documentation_url": "https://docs.github.com/articles/about-protected-branches",
+          "status": "405"
+        }
+      },
+      "greenRun": {
+        "id": 42064026830,
+        "url": "https://github.com/oppaii230205/leetkob-awad-2026/actions/runs/42064026830",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      "mergeAfterGreen": {
+        "sha": "e2673715b85253487e6aaa0e6ba35c4913e6e2cd",
+        "merged": true,
+        "message": "Pull Request successfully merged"
+      },
+      "changedFiles": {
+        "b870d02ce2b0dbfd96da6135185f0d0627d43c0b": [
+          "src/repository.ts"
+        ],
+        "95d575967e61670bc0dc2b79236e814255edd6e2": [
+          "src/repository.ts"
+        ]
+      },
+      "testAndContractChangesInExperimentOrRepair": false
+    }
+  ],
+  "note": "Data assembled from actual saved GitHub API responses and git diff-tree output. Both regressions were intentional, source-only, and repaired before merge."
+}
